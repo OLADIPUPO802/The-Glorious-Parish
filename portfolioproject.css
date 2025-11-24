@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
+    background: linear-gradient(to bottom right, blue,yellow);
     color: #222;
 }
 
@@ -55,17 +55,18 @@ blockquote {
 }
 
 #home{
-    background: url(TGP\ CHOIR\ .jpg);
+    background-image: url("TGP-CHOIR.jpg");
     background-size: cover;
-    height: 400px;
+    background-position: center;
     background-repeat: no-repeat;
+    height: 600px;
     width: 100%;
-    
-    color:brown;
-    object-fit: cover;
+    color: brown;
     font-weight: bold;
-
+    margin-top: 10px;
+    overflow-x: hidden;
 }
+ 
 
  img{
      max-width:100%;
@@ -87,4 +88,5 @@ audio:hover{
  transform: skewX(12);
  transition: 0.4s ease-in-out
 }
+
 
