@@ -1,99 +1,134 @@
+* {
+    margin: 0;
+    max-width: 100%;
+}
+
 body {
-    margin: 0px;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, blue,yellow);
+    background: #f5f5f5;
     color: #222;
-    box-sizing:border-box;
-    background-size:cover;
+    box-sizing: border-box;
 }
 
-/* Header */
+/* WRAPPER */
+.all {
+    margin: auto;
+}
+
+/* ---------------- HEADER ---------------- */
 header {
-    background: linear-gradient(yellow, #004aad 60%); /* Deep blue */
-    color: blue;
-    text-shadow: yellow 20;
-    padding: 10px;
+    background: #002366; /* Deep RCCG Blue */
+    color: white;
+    padding: 15px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #d4af37; /* Gold line */
 }
 
-
+#header-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
 
 header nav a {
-    color: yellow;
+    color: #f7f7f7;
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
-    display:inline-flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
+    transition: 0.3s ease-in-out;
 }
 
 header nav a:hover {
+    color: #d4af37; /* Gold Hover */
     text-decoration: underline;
-    padding-left: 4px;
-    padding-right: 4px;
-   
+    text-decoration-color: #d4af37;
 }
 
-/* Sections */
+/* ---------------- SECTIONS ---------------- */
 .section {
     padding: 50px 20px;
     max-width: 900px;
-    margin:0 ;
+    margin: auto;
 }
+
 h2 {
-    color: #004aad;
+    color: #002366; /* Deep Blue */
+    text-align: center;
 }
 
 blockquote {
     margin-top: 20px;
     padding: 15px;
-    background: #fff8c460; /* soft yellow */
-    border-left: 5px solid #ffd300;
+    background: #fff3d4; /* Soft gold tint */
+    border-left: 5px solid #d4af37; /* Gold */
     font-style: italic;
 }
 
-#home{
-    background-image: url("TGP-CHOIR.jpg");
-    background-size: contain;
+/* ---------------- HOME SECTION ---------------- */
+#home {
+    background-image: url(TGP-CHOIR.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     height: 600px;
-    max-width: 100%;
-    color: brown;
+    color: white;
     font-weight: bold;
     margin-top: 10px;
-    overflow-x: hidden;
 }
- 
 
- img{
-     max-width:100%;
-     height:auto;
-     display:block;
- }
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* Dark overlay for readability */
+}
 
-/* Footer */
+#home h2, #home p, #home blockquote {
+    position: relative;
+    z-index: 10;
+}
+
+/* ---------------- CONTACT BOX ---------------- */
+#contact {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #d4af37; /* Gold border */
+}
+
+#contact a {
+    color: #002366;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #d4af37;
+}
+
+/* ---------------- FOOTER ---------------- */
 footer {
-    background: #004aad;
+    background: #002366;
     color: white;
     text-align: center;
-    padding: 1px;
+    padding: 10px;
     margin-top: 30px;
-}
-audio:hover{
- background-color:red;
- color: blue;
- transform: skewX(12);
- transition: 0.4s ease-in-out
+    border-top: 3px solid #d4af37;
 }
 
-
-
-
-
-
-
+/* ---------------- AUDIO ---------------- */
+audio:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 5px #d4af37);
+}
