@@ -55,7 +55,7 @@ blockquote {
 }
 
 #home{
-    background: url(images/TGP\ CHOIR\ .jpg);
+    background: url(TGP\ CHOIR\ .jpg);
     background-size: cover;
     height: 400px;
     background-repeat: no-repeat;
@@ -67,7 +67,11 @@ blockquote {
 
 }
 
- 
+ img{
+     max-width:100%;
+     height:auto;
+     display:block;
+ }
 
 /* Footer */
 footer {
@@ -83,3 +87,4 @@ audio:hover{
  transform: skewX(12);
  transition: 0.4s ease-in-out
 }
+
