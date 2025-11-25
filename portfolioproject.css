@@ -1,81 +1,99 @@
-* {
-    margin: 0;
-    max-width: 100%;
-}
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #222;
-    box-sizing: border-box;
-}
+    /* ------- Reset & base ------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f7f7f7;
+      color: #222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
 
-/* WRAPPER */
-.all {
-    margin: auto;
-}
+    .youtube-icon{
+      color: red;
+      transition: 0.3s;
+    }
+    .youtube-icon:hover{
+      transform: scale(1.2);
+      color: darkred;
+    }
+    .message-icon{
+      color: #555
+      
+    }
+    .tiktok-icon{
+      color: white;
+    }
+    .address-icon{
+      color: red;
+    }
+    button{
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover{
+      background-color: #0056b3;
+    }
+    i{
+      font-size: 23px;
+      color: green;
+    }
+    a { text-decoration: none; }
+    a:hover{text-decoration: underline; }
+    a:active,:visited{color: #0056b3;}
+   
 
-/* ---------------- HEADER ---------------- */
-header {
-    background: #002366; /* Deep RCCG Blue */
-    color: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-     line */
-}
+    /* ------- NAV ------- */
+    .nav-wrap {
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 60;
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: #111;
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    nav a {
+      color: #444;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color .18s, background .18s;
+    }
+    nav a:active,:visited{
+      color: #444;
+      text-decoration: none;
+    }
 
-#header-name {
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
-}
 
-header nav a {
-    color: #f7f7f7;
-    text-decoration: none;
-    margin: 0 7px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-}
+    .nav-links a:hover { color: #007bff; background: rgba(0,123,255,0.06); }
 
-header nav a:hover {
-    color: #d4af37; /* Gold Hover */
-    text-decoration: underline;
-    text-decoration-color: #d4af37;
-}
-
-/* ---------------- SECTIONS ---------------- */
-.section {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-h2 {
-    color: #002366; /* Deep Blue */
-    text-align: center;
-}
-
-blockquote {
-    margin-top: 20px;
-    padding: 15px;
-    background: #fff3d4; /* Soft gold tint */
-    border-left: 5px solid #d4af37; /* Gold */
-    font-style: italic;
-}
-#schedule{
-  background-color:rgba(123,201,112,0.1);
-  border-radius: 50px;
-  margin:auto ;
-}
-
-/* ---------------- HOME SECTION ---------------- */
-.hero {
+    /* ------- HERO ------- */
+    .hero {
       position: relative;
       height: 520px;
       display: flex;
@@ -83,7 +101,9 @@ blockquote {
       justify-content: center;
       text-align: center;
       color: #fff;
-      background: center/cover no-repeat;
+      background: url(TGP-CHOIR.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 100%;
     }
     .hero::before {
@@ -129,40 +149,85 @@ blockquote {
     }
     .hero .cta:hover { transform: translateY(-3px); background: #0056b3; }
 
-/* ---------------- CONTACT BOX ---------------- */
-#contact {
-    max-width: 400px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid #d4af37; /* Gold border */
-}
+    /* ------- SECTIONS ------- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 22px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .lead-text {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      color: #333;
+      font-size: 16px;
+      opacity: 0.95;
+    }
 
-#contact a {
-    color: #002366;
-    font-weight: bold;
-}
+    /* About + schedule columns */
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: start;
+    }
+    .card {
+      background: #695b5b;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(22,22,22,0.04);
+    }
 
-#contact a:hover {
-    color: #d4af37;
-}
+    .schedule ul { list-style: disc; padding-left: 20px; }
+    .schedule li { margin: 8px 0; font-weight: 600; color: #e7e7e7; }
 
-/* ---------------- FOOTER ---------------- */
-footer {
-    background: #002366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
-    border-top: 3px solid #d4af37;
-}
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      border: 3px solid rgba(0,123,255,0.10);
+    }
 
-/* ---------------- AUDIO ---------------- */
-audio:hover {
-    transform: scale(1.03);
-    transition: 0.3s;
-    filter: drop-shadow(0 0 5px #d4af37);
-}
+    /* Footer */
+    footer {
+      background: #111;
+      color: #d5d5d5;
+      padding: 28px 20px;
+      margin-top: 36px;
+    }
+    footer .wrap {
+      text-align: center;
+      font-size: 24px;
+    }
+    .alone{
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+    footer a { color: #4da3ff; text-decoration: none; font-weight: 600; }
 
-
+    /* Responsive */
+    @media (max-width: 880px) {
+      .hero h1 { font-size: 36px; }
+      .cols { grid-template-columns: 1fr; }
+      nav { padding: 12px; }
+      .nav-links { display: none; } /* simple mobile collapse */
+    }
