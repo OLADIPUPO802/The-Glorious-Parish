@@ -76,7 +76,7 @@ blockquote {
 
 /* ---------------- HOME SECTION ---------------- */
 #home {
-    background-image: url(Image/Hadi.png);
+    background-image: url(TGP-CHOIR.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -137,3 +137,4 @@ audio:hover {
     transition: 0.3s;
     filter: drop-shadow(0 0 5px #d4af37);
 }
+
